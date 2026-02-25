@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Screen Image</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .rotated-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      /* swap dimensions */
+      width: 100vh;
+      height: 100vw;
+
+      transform: rotate(90deg);
+      transform-origin: top left;
+    }
+
+    .fullscreen-image {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="rotated-container">
+    <img 
+      src="1m.png"
+      alt="Display Image"
+      class="fullscreen-image"
+    >
+  </div>
+
+</body>
+</html>
